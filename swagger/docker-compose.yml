@@ -1,0 +1,15 @@
+version: '3'
+services: 
+  editor:
+    image: 'swaggerapi/swagger-editor'
+    ports:
+      - '80:8080'
+  ui:
+    image: 'swaggerapi/swagger-ui'
+    ports:
+      - '81:8080'
+    environment: 
+      SWAGGER_JSON: '/swagger/assignments.yaml'
+    volumes: 
+      - 'D:/data/dockers/swagger:/swagger'
+    
